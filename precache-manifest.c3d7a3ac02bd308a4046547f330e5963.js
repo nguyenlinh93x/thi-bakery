@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7fca4e85b8be48d66c452faa4af9b9e7",
+    "revision": "c0af1927027d743340de5688addabeca",
     "url": "/thi-bakery/index.html"
   },
   {
-    "revision": "e257a3cfaf58145fb3a0",
+    "revision": "c1215ae108ea650c86a3",
     "url": "/thi-bakery/static/css/main.0febcdc8.chunk.css"
   },
   {
-    "revision": "526120fcc89370f84e12",
-    "url": "/thi-bakery/static/js/2.e66e6e72.chunk.js"
+    "revision": "7894b39993c0ea015c8b",
+    "url": "/thi-bakery/static/js/2.efd37e67.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/thi-bakery/static/js/2.e66e6e72.chunk.js.LICENSE.txt"
+    "url": "/thi-bakery/static/js/2.efd37e67.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e257a3cfaf58145fb3a0",
-    "url": "/thi-bakery/static/js/main.60669263.chunk.js"
+    "revision": "c1215ae108ea650c86a3",
+    "url": "/thi-bakery/static/js/main.1c50f5a5.chunk.js"
   },
   {
     "revision": "9d79a2851d77fb5295b5",
