@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/thi-bakery/static/css/main.0febcdc8.chunk.css",
-    "main.js": "/thi-bakery/static/js/main.60669263.chunk.js",
-    "main.js.map": "/thi-bakery/static/js/main.60669263.chunk.js.map",
+    "main.css": "/thi-bakery/static/css/main.192f9fed.chunk.css",
+    "main.js": "/thi-bakery/static/js/main.d4171c52.chunk.js",
+    "main.js.map": "/thi-bakery/static/js/main.d4171c52.chunk.js.map",
     "runtime-main.js": "/thi-bakery/static/js/runtime-main.8964c7c6.js",
     "runtime-main.js.map": "/thi-bakery/static/js/runtime-main.8964c7c6.js.map",
     "static/js/2.e66e6e72.chunk.js": "/thi-bakery/static/js/2.e66e6e72.chunk.js",
     "static/js/2.e66e6e72.chunk.js.map": "/thi-bakery/static/js/2.e66e6e72.chunk.js.map",
     "index.html": "/thi-bakery/index.html",
-    "precache-manifest.15394c1ebbe8ed4b7c4fa786b67fd793.js": "/thi-bakery/precache-manifest.15394c1ebbe8ed4b7c4fa786b67fd793.js",
+    "precache-manifest.a4d1bbfebf9e5eba89fa148d7f040d7d.js": "/thi-bakery/precache-manifest.a4d1bbfebf9e5eba89fa148d7f040d7d.js",
     "service-worker.js": "/thi-bakery/service-worker.js",
-    "static/css/main.0febcdc8.chunk.css.map": "/thi-bakery/static/css/main.0febcdc8.chunk.css.map",
+    "static/css/main.192f9fed.chunk.css.map": "/thi-bakery/static/css/main.192f9fed.chunk.css.map",
     "static/js/2.e66e6e72.chunk.js.LICENSE.txt": "/thi-bakery/static/js/2.e66e6e72.chunk.js.LICENSE.txt",
     "static/media/styles.less": "/thi-bakery/static/media/cake.a6f80b0a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8964c7c6.js",
     "static/js/2.e66e6e72.chunk.js",
-    "static/css/main.0febcdc8.chunk.css",
-    "static/js/main.60669263.chunk.js"
+    "static/css/main.192f9fed.chunk.css",
+    "static/js/main.d4171c52.chunk.js"
   ]
 }

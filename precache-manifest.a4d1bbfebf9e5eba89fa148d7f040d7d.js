@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7fca4e85b8be48d66c452faa4af9b9e7",
+    "revision": "5de625d05b9f41d99b41d495d942bd27",
     "url": "/thi-bakery/index.html"
   },
   {
-    "revision": "e257a3cfaf58145fb3a0",
-    "url": "/thi-bakery/static/css/main.0febcdc8.chunk.css"
+    "revision": "9d0ecae07580bb6141fa",
+    "url": "/thi-bakery/static/css/main.192f9fed.chunk.css"
   },
   {
     "revision": "526120fcc89370f84e12",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/thi-bakery/static/js/2.e66e6e72.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e257a3cfaf58145fb3a0",
-    "url": "/thi-bakery/static/js/main.60669263.chunk.js"
+    "revision": "9d0ecae07580bb6141fa",
+    "url": "/thi-bakery/static/js/main.d4171c52.chunk.js"
   },
   {
     "revision": "9d79a2851d77fb5295b5",
