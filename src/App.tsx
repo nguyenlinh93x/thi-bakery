@@ -12,6 +12,8 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Product } from "pages/Product";
 import { Layout } from "antd";
 import { ScrollToTopOnMount, ScrollToTop } from "components";
+import { ProductDetail } from "pages/ProductDetail";
+import { LandingLeft } from "pages/Landing/LandingLeft";
 
 const { Footer } = Layout;
 
@@ -23,10 +25,13 @@ const AnimationApp = () => {
       <CSSTransition key={location.key} timeout={300}>
         <Switch location={location}>
           <Route exact path="/">
-            <Landing />
+            <LandingLeft />
           </Route>
-          <Route path="/product/:productName">
+          <Route exact path="/product/:productName">
             <Product />
+          </Route>
+          <Route path="/product/:productName/:slug">
+            <ProductDetail />
           </Route>
         </Switch>
       </CSSTransition>

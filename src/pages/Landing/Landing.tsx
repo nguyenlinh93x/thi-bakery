@@ -45,7 +45,7 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-      <section id="menu">
+      {/* <section id="menu">
         <Title
           style={{
             textAlign: "left",
@@ -109,7 +109,7 @@ export const Landing = () => {
             />
           </Col>
         </Row>
-      </section>
+      </section> */}
     </>
   );
 };

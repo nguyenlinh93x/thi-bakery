@@ -38,6 +38,39 @@ a {
   border-radius: 50%;
 }
 
+#landing-left {
+  .left-part {
+    // background-color: #b5b9ca;
+    background-color: navajowhite;
+    .ant-typography {
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+    a {
+      color: black;
+      // font-weight: bold;
+    }
+    a:hover {
+      color: crimson;
+    }
+  }
+  .right-part {
+    position: relative;
+    z-index: 1;
+  }
+  .right-part::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+    // z-index: -1;
+  }
+}
+
 /* Hero Section */
 #hero {
   background-image: url(~assets/img/cake.jpg);
@@ -48,14 +81,14 @@ a {
 }
 
 #hero::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: .7;
+  opacity: 0.7;
   z-index: -1;
 }
 
@@ -72,7 +105,7 @@ a {
   font-size: 3rem;
   position: relative;
   color: transparent;
-  animation: text_reveal .5s ease forwards;
+  animation: text_reveal 0.5s ease forwards;
   animation-delay: 1s;
   line-height: 4rem;
 }
@@ -84,7 +117,7 @@ a {
   animation-delay: 2s;
 }
 #hero h1:nth-child(3) {
-  animation: text_reveal_name .5s ease forwards;
+  animation: text_reveal_name 0.5s ease forwards;
   animation-delay: 3s;
 }
 #hero h1 span {
@@ -95,11 +128,11 @@ a {
   height: 100%;
   background-color: crimson;
   animation: text_reveal_box 1s ease;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 #hero h1:nth-child(1) span {
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 #hero h1:nth-child(2) span {
   animation-delay: 1.5s;
@@ -118,7 +151,7 @@ a {
   text-transform: uppercase;
   // letter-spacing: 1rem;
   margin-top: 20px;
-  transition: .3s ease;
+  transition: 0.3s ease;
   transition-property: background-color, color;
 }
 
@@ -170,5 +203,3 @@ a {
   }
 }
 /* End keyframes */
-
-
