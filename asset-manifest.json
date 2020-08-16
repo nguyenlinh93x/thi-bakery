@@ -1,23 +1,33 @@
 {
   "files": {
-    "main.css": "/thi-bakery/static/css/main.0febcdc8.chunk.css",
-    "main.js": "/thi-bakery/static/js/main.1c50f5a5.chunk.js",
-    "main.js.map": "/thi-bakery/static/js/main.1c50f5a5.chunk.js.map",
+    "main.css": "/thi-bakery/static/css/main.8cfb1b93.chunk.css",
+    "main.js": "/thi-bakery/static/js/main.e595050b.chunk.js",
+    "main.js.map": "/thi-bakery/static/js/main.e595050b.chunk.js.map",
     "runtime-main.js": "/thi-bakery/static/js/runtime-main.8964c7c6.js",
     "runtime-main.js.map": "/thi-bakery/static/js/runtime-main.8964c7c6.js.map",
-    "static/js/2.efd37e67.chunk.js": "/thi-bakery/static/js/2.efd37e67.chunk.js",
-    "static/js/2.efd37e67.chunk.js.map": "/thi-bakery/static/js/2.efd37e67.chunk.js.map",
+    "static/css/2.40a775a0.chunk.css": "/thi-bakery/static/css/2.40a775a0.chunk.css",
+    "static/js/2.d5092794.chunk.js": "/thi-bakery/static/js/2.d5092794.chunk.js",
+    "static/js/2.d5092794.chunk.js.map": "/thi-bakery/static/js/2.d5092794.chunk.js.map",
     "index.html": "/thi-bakery/index.html",
-    "precache-manifest.c3d7a3ac02bd308a4046547f330e5963.js": "/thi-bakery/precache-manifest.c3d7a3ac02bd308a4046547f330e5963.js",
+    "precache-manifest.9e0e2894a62da0bd766db97d3e4255d1.js": "/thi-bakery/precache-manifest.9e0e2894a62da0bd766db97d3e4255d1.js",
     "service-worker.js": "/thi-bakery/service-worker.js",
-    "static/css/main.0febcdc8.chunk.css.map": "/thi-bakery/static/css/main.0febcdc8.chunk.css.map",
-    "static/js/2.efd37e67.chunk.js.LICENSE.txt": "/thi-bakery/static/js/2.efd37e67.chunk.js.LICENSE.txt",
-    "static/media/styles.less": "/thi-bakery/static/media/cake.a6f80b0a.jpg"
+    "static/css/2.40a775a0.chunk.css.map": "/thi-bakery/static/css/2.40a775a0.chunk.css.map",
+    "static/css/main.8cfb1b93.chunk.css.map": "/thi-bakery/static/css/main.8cfb1b93.chunk.css.map",
+    "static/js/2.d5092794.chunk.js.LICENSE.txt": "/thi-bakery/static/js/2.d5092794.chunk.js.LICENSE.txt",
+    "static/media/4.jpg": "/thi-bakery/static/media/4.790d9be5.jpg",
+    "static/media/banner4.jpg": "/thi-bakery/static/media/banner4.1e397ffc.jpg",
+    "static/media/btlm-cat.jpg": "/thi-bakery/static/media/btlm-cat.62bd10d0.jpg",
+    "static/media/styles.less": "/thi-bakery/static/media/cake.a6f80b0a.jpg",
+    "static/media/docake.jpg": "/thi-bakery/static/media/docake.5e3a4f9a.jpg",
+    "static/media/introduce.jpg": "/thi-bakery/static/media/introduce.272f1b5e.jpg",
+    "static/media/thi-logo2.gif": "/thi-bakery/static/media/thi-logo2.9d02bec5.gif",
+    "static/media/thumbnail.jpg": "/thi-bakery/static/media/thumbnail.f74f4599.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8964c7c6.js",
-    "static/js/2.efd37e67.chunk.js",
-    "static/css/main.0febcdc8.chunk.css",
-    "static/js/main.1c50f5a5.chunk.js"
+    "static/css/2.40a775a0.chunk.css",
+    "static/js/2.d5092794.chunk.js",
+    "static/css/main.8cfb1b93.chunk.css",
+    "static/js/main.e595050b.chunk.js"
   ]
 }
