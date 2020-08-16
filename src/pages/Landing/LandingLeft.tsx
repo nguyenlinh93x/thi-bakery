@@ -7,7 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 import { convertToSlug } from "utils";
 import { Typography } from "antd";
 
-const { Title } = Typography;
+const { Title, Paragraph, Text } = Typography;
 
 const data = [
   {
@@ -15,25 +15,40 @@ const data = [
     img: require("assets/img/btlm-cat.jpg"),
   },
   {
-    title: "Beverages",
-    img: "https://www.tljus.com/wp-content/uploads/2019/12/menu-light-meal.jpg",
+    title: "Flan Gato",
+    img: require("assets/img/flan-gato/4.jpg"),
   },
   {
-    title: "Catering",
-    img: "https://www.tljus.com/wp-content/uploads/2019/12/menu-catering.jpg",
+    title: "Flower Cupcake",
+    img: require("assets/img/flower-cupcake/thumbnail.jpg"),
+  },
+  {
+    title: "Healthy Cake",
+    img: require("assets/img/healthy-cake/thumbnail.jpg"),
+  },
+  {
+    title: "Roll Cake",
+    img: require("assets/img/roll-cake/thumbnail.jpg"),
   },
 ];
+
+const gridStyle: React.CSSProperties = {
+  width: "25%",
+  textAlign: "center",
+};
 
 export const LandingLeft = () => {
   const history = useHistory();
 
   return (
-    <>
+    <div style={{ backgroundColor: "rgb(255 222 173 / 39%)" }}>
       <section id="landing-left">
         <Row>
           <Col
             xl={10}
             lg={0}
+            md={0}
+            xs={0}
             order={14}
             className={"left-part"}
             // style={{ backgroundColor: "rgb(141 143 154 / 33%)", width: "100%" }}
@@ -42,19 +57,19 @@ export const LandingLeft = () => {
               <div>
                 <img src={require("assets/img/thi-logo2.gif")} />
                 <Title>
-                  <Link to={""}>
+                  <a href={"#menu"}>
                     Bánh cùng Thị nha <span></span>
-                  </Link>
+                  </a>
                 </Title>
                 <Title>
-                  <Link to={""}>
-                    Làm bánh cùng Thị <span></span>
-                  </Link>
-                </Title>
-                <Title>
-                  <Link to={""}>
+                  <a href={"#introduce"}>
                     Một chút về Thị <span></span>
-                  </Link>
+                  </a>
+                </Title>
+                <Title>
+                  <a href={"#do-cake"}>
+                    Làm bánh cùng Thị <span></span>
+                  </a>
                 </Title>
                 <Title>
                   <Link to={""}>
@@ -67,7 +82,14 @@ export const LandingLeft = () => {
               </div>
             </div>
           </Col>
-          <Col className={"right-part"} xl={14} lg={24} order={10}>
+          <Col
+            className={"right-part"}
+            xl={14}
+            lg={24}
+            md={24}
+            xs={24}
+            order={10}
+          >
             {/* <div className={'banner'} /> */}
             <img
               src={require("assets/img/banner4.jpg")}
@@ -79,14 +101,14 @@ export const LandingLeft = () => {
       <section id="menu">
         <Title
           style={{
-            textAlign: "left",
-            marginTop: "16px",
-            marginBottom: "16px",
+            textAlign: "center",
+            paddingTop: "84px",
+            marginBottom: "50px",
             paddingLeft: "16px",
           }}
-          level={3}
+          level={2}
         >
-          Menu
+          Bánh cùng Thị nha
         </Title>
         <Row style={{ overflow: "hidden" }}>
           <Col span={24}>
@@ -141,6 +163,94 @@ export const LandingLeft = () => {
           </Col>
         </Row>
       </section>
-    </>
+
+      {/* Introduce */}
+      <section id="introduce">
+        <Row style={{ paddingTop: "160px" }}>
+          <Col xl={8} md={24} className={"content"}>
+            <Title>Một chút về Thị</Title>
+            <Paragraph style={{ textAlign: "justify" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id
+              lacus urna. In facilisis, sem et convallis fringilla, magna massa
+              egestas eros, ut volutpat leo elit ut lacus. Vivamus lobortis
+              lorem vel blandit sollicitudin. Nunc leo metus, tincidunt eget
+              porttitor vel, luctus nec risus. Donec mollis lacus eu augue
+              dictum efficitur. Curabitur luctus facilisis diam vel ornare.
+              Praesent id placerat sapien, sit amet bibendum tellus. Nam a est
+              ornare nunc ultricies finibus. Aenean sit amet mollis nisl.
+              Pellentesque sodales eleifend nibh quis sagittis. In sollicitudin
+              facilisis auctor
+            </Paragraph>
+            <Paragraph>
+              Vestibulum eleifend vitae purus et sodales. Nunc a placerat
+              libero, non congue urna. Maecenas feugiat condimentum nulla, ut
+              bibendum lectus hendrerit in. Sed elementum, risus a fermentum
+              egestas, est leo ullamcorper velit, a bibendum velit leo ac velit.
+              Pellentesque pellentesque aliquet rhoncus. Sed maximus, sem et
+              pellentesque maximus, elit purus suscipit turpis, viverra
+              facilisis ante sem eu tellus. Vivamus eu ligula ultrices, pulvinar
+              sem sit amet, pellentesque magna.
+            </Paragraph>
+          </Col>
+          <Col xl={16} md={24}>
+            <img
+              src={require("assets/img/introduce.jpg")}
+              style={{ width: "100%", objectFit: "contain" }}
+            />
+          </Col>
+        </Row>
+      </section>
+
+      {/* Do Cake */}
+      <section id="do-cake">
+        <Row>
+          <Col span={12}>
+            <img
+              src={require("assets/img/docake.jpg")}
+              style={{ width: "100%", objectFit: "contain" }}
+            />
+          </Col>
+          <Card
+            title="Làm bánh cùng Thị"
+            className={"card"}
+            style={{ width: "30%" }}
+            // bordered={false}
+          >
+            <ul>
+              <li>
+                <a>
+                  <p>Content 1</p>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <p>Content 2</p>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <p>Content 3</p>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <p>Content 4</p>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <p>Content 5</p>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <p>Content 6</p>
+                </a>
+              </li>
+            </ul>
+          </Card>
+        </Row>
+      </section>
+    </div>
   );
 };

@@ -7,6 +7,7 @@ import {
   Switch,
   Route,
   useLocation,
+  Redirect,
 } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Product } from "pages/Product";
@@ -25,6 +26,9 @@ const AnimationApp = () => {
       <CSSTransition key={location.key} timeout={300}>
         <Switch location={location}>
           <Route exact path="/">
+            <Redirect to={"thi-bakery"} />
+          </Route>
+          <Route exact path="/thi-bakery">
             <LandingLeft />
           </Route>
           <Route exact path="/product/:productName">

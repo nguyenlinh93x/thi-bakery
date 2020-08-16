@@ -8,6 +8,7 @@ import {
   EyeOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
+import { useHistory, useLocation, useRouteMatch } from "react-router-dom";
 
 const { Title } = Typography;
 
@@ -63,6 +64,13 @@ const data = [
 ];
 
 export const Cakes = () => {
+  const history = useHistory();
+  let { url } = useRouteMatch();
+
+  const navigateDetail = () => {
+    history.push(`${url}/detail`);
+  };
+
   return (
     <Row>
       <Col span={24}>
@@ -94,7 +102,7 @@ export const Cakes = () => {
             pageSize: 8,
           }}
           renderItem={(item) => (
-            <List.Item>
+            <List.Item onClick={navigateDetail}>
               <Card
                 // title={item.title}
                 cover={
