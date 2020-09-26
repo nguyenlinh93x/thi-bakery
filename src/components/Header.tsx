@@ -1,31 +1,102 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useCallback, useMemo } from "react";
 import "./styles.less";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useRouteMatch } from "react-router-dom";
+import { useWindowSize } from "components";
+import { LandingPagePath } from "App";
+
+const productDetailRegex = /product\/.+\/.*/;
 
 export const Header = () => {
+  const location = useLocation();
   const hamburgerRef = useRef<HTMLDivElement | null>(null);
   const mobileMenuRef = useRef<HTMLUListElement | null>(null);
   const headerRef = useRef<HTMLDivElement | null>(null);
+  const windowSize = useWindowSize();
+
+  const isProductDetail = useCallback(
+    () => productDetailRegex.test(location.pathname),
+    [location.pathname]
+  );
+
+  const isLandingPage = useCallback(
+    () => location.pathname === LandingPagePath,
+    [location.pathname]
+  );
 
   useEffect(() => {
     const hamburger = hamburgerRef.current;
     const mobileMenu = mobileMenuRef.current;
     const header = headerRef.current;
+
     if (hamburger && mobileMenu && header) {
-      hamburger.addEventListener("click", (e) => {
+      if (isLandingPage()) {
+        const handleScroll = () => {
+          const scrollPosition = window.scrollY;
+          if (scrollPosition > 250) {
+            header.style.opacity = "1";
+          } else {
+            header.style.opacity = "0";
+          }
+        };
+        if (windowSize.width && windowSize.width >= 1200) {
+          header.style.opacity = "0";
+
+          document.addEventListener("scroll", handleScroll);
+        } else {
+          document.removeEventListener("scroll", handleScroll);
+          header.style.opacity = "1";
+        }
+        return () => {
+          document.removeEventListener("scroll", handleScroll);
+        };
+      }
+      // else if (isProductDetail()) {
+      //   header.style.backgroundColor = "crimson";
+      // }
+    }
+  }, [isLandingPage, windowSize]);
+
+  useEffect(() => {
+    const hamburger = hamburgerRef.current;
+    const mobileMenu = mobileMenuRef.current;
+    const header = headerRef.current;
+
+    if (hamburger && mobileMenu && header) {
+      if (isProductDetail()) {
+        header.className = "header primary";
+      }
+
+      const handleHamburgerClick = (e: MouseEvent) => {
         hamburger.classList.toggle("active");
         mobileMenu.classList.toggle("active");
-      });
-      document.addEventListener("scroll", () => {
+      };
+      const handleScroll = () => {
         const scrollPosition = window.scrollY;
-        if (scrollPosition > 250) {
-          header.style.backgroundColor = "#29323c";
+
+        if (!isProductDetail()) {
+          if (scrollPosition > 250) {
+            header.className = "header primary";
+          } else {
+            header.className = "header transparent";
+          }
         } else {
-          header.style.backgroundColor = "transparent";
+          if (scrollPosition === 0 || scrollPosition > 750) {
+            header.className = "header primary";
+          } else {
+            header.className = "header transparent";
+          }
         }
-      });
+      };
+
+      hamburger.addEventListener("click", handleHamburgerClick);
+      document.addEventListener("scroll", handleScroll);
+
+      return () => {
+        hamburger.removeEventListener("click", handleHamburgerClick);
+        document.removeEventListener("click", handleScroll);
+      };
     }
-  }, []);
+  }, [windowSize, isProductDetail]);
 
   const mobileLinkClick = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -61,29 +132,40 @@ export const Header = () => {
               </div>
               <ul ref={mobileMenuRef}>
                 <li>
-                  <Link to="/" data-after="Home" onClick={mobileLinkClick}>
-                    Trang chủ
+                  <Link
+                    to="/"
+                    data-after="BÁNH CÙNG THỊ NHA"
+                    onClick={mobileLinkClick}
+                  >
+                    BÁNH CÙNG THỊ NHA
                   </Link>
                 </li>
-                {/* <li>
-                  <Link to="/menu" data-after="Menu" onClick={mobileLinkClick}>
-                    Menu
+                <li>
+                  <Link
+                    to="/"
+                    data-after="LÀM BÁNH CÙNG THỊ"
+                    onClick={mobileLinkClick}
+                  >
+                    LÀM BÁNH CÙNG THỊ
                   </Link>
-                </li> */}
-                <li>
-                  <a href="#" data-after="Blog" onClick={mobileLinkClick}>
-                    Blog
-                  </a>
                 </li>
-                {/* <li>
-                  <a href="#" data-after="About" onClick={mobileLinkClick}>
-                    About
-                  </a>
-                </li> */}
                 <li>
-                  <a href="#" data-after="Contact" onClick={mobileLinkClick}>
-                    Liên hệ
-                  </a>
+                  <Link
+                    to="/"
+                    data-after="MỘT CHÚT VỀ THỊ"
+                    onClick={mobileLinkClick}
+                  >
+                    MỘT CHÚT VỀ THỊ
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    data-after="KẾT NỐI THỊ NÀO"
+                    onClick={mobileLinkClick}
+                  >
+                    KẾT NỐI THỊ NÀO
+                  </Link>
                 </li>
               </ul>
             </div>

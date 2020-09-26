@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Row, Col, Divider, List, Card, Tooltip } from "antd";
+import { Typography, Row, Col, List, Card, Tooltip } from "antd";
 import "./styles.less";
 import Meta from "antd/lib/card/Meta";
 import { ImageScale } from "components";
@@ -8,10 +8,16 @@ import {
   EyeOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
+import { useRouteMatch, useHistory } from "react-router-dom";
+import { convertToSlug } from "utils";
 
-const { Title } = Typography;
+export interface Product {
+  title: string;
+  price: number;
+  img: string;
+}
 
-const data = [
+const data: Product[] = [
   {
     title: "Cake 1",
     price: 450000,
@@ -63,6 +69,15 @@ const data = [
 ];
 
 export const Cakes = () => {
+  const match = useRouteMatch();
+  const history = useHistory();
+
+  const moveDetail = (item: Product) => {
+    history.push(`${match.url}/${convertToSlug(item.title)}`, {
+      item,
+    });
+  };
+
   return (
     <Row>
       <Col span={24}>
@@ -94,7 +109,7 @@ export const Cakes = () => {
             pageSize: 8,
           }}
           renderItem={(item) => (
-            <List.Item>
+            <List.Item onClick={() => moveDetail(item)}>
               <Card
                 // title={item.title}
                 cover={

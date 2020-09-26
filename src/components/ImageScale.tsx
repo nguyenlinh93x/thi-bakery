@@ -42,6 +42,8 @@ export const ImageScale: React.FC<Props> = ({ alt, src, style }) => {
           zIndex: 1,
           willChange: "transform",
           transform: props.x.interpolate(trans),
+          width: "100%",
+          objectFit: "cover",
         }}
       />
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.less";
 import { Row, Col, List, Card } from "antd";
 import Title from "antd/lib/typography/Title";
-import { ImageScale } from "components";
+import { ImageScale, useWindowSize } from "components";
 import { Meta } from "antd/lib/list/Item";
 import { Link, useHistory } from "react-router-dom";
 import { convertToSlug } from "utils";
@@ -24,25 +24,48 @@ const data = [
 
 export const Landing = () => {
   const history = useHistory();
+  const windowSize = useWindowSize();
 
   return (
     <>
       <section id="hero">
         <div className="hero container">
-          <div>
-            <h1>
-              Tiệm bánh Thị <span></span>
-            </h1>
-            <h1>
-              Xin chào <span></span>
-            </h1>
-            <h1>
-              Quý khách <span></span>
-            </h1>
-            <Link to="/" className="cta">
-              Khám phá
-            </Link>
-          </div>
+          {windowSize.width && windowSize.width >= 1200 ? (
+            <div>
+              <Link to="">
+                <h1>
+                  BÁNH CÙNG THỊ NHA <span></span>
+                </h1>
+              </Link>
+              <Link to="">
+                <h1>
+                  LÀM BÁNH CÙNG THỊ <span></span>
+                </h1>
+              </Link>
+              <Link to="">
+                <h1>
+                  MỘT CHÚT VỀ THỊ <span></span>
+                </h1>
+              </Link>
+              <Link to="">
+                <h1>
+                  KẾT NỐI THỊ NÀO <span></span>
+                </h1>
+              </Link>
+            </div>
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Link to="/" className="cta">
+                Khám phá
+              </Link>
+            </div>
+          )}
         </div>
       </section>
       <section id="menu">
